@@ -1,4 +1,4 @@
-"""Calc game."""
+"""GCD game."""
 
 import math
 import random
