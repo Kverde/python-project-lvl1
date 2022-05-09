@@ -6,6 +6,8 @@ from brain_games.cli import welcome_user
 
 MAX_ROUNDS = 3
 
+MSG_FAIL_GAME = "'{0}' is wrong answer ;(. Correct answer was '{1}'."
+
 
 def start_game(welcome_text, make_question):
     """Run game.
@@ -28,7 +30,7 @@ def start_game(welcome_text, make_question):
         user_answer = prompt.string('Your answer: ')
 
         if user_answer != str(correct_answer):
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(MSG_FAIL_GAME.format(user_answer, correct_answer))
             print(f"Let's try again, {user_name}!")
             return
 
